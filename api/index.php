@@ -468,7 +468,7 @@ a[href="PENDING"] {
 
 </head>
 <body>
-    <img class="mastogetlogo" width="128px" height="128px" src="https://res.cloudinary.com/dceum4nes/image/upload/v1748231620/mastofetch/Logo_wgac9d.png">
+    <img class="mastogetlogo" width="128px" height="128px" src="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/mastofetch/Logo_wgac9d">
     <p class="popup" style="color:white; text-align:center">
         <a href="#" onclick="location.reload(); return false;">Refresh Content</a><br>
         <a href="PENDING">About Mastofetch</a>
