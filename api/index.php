@@ -357,14 +357,14 @@ $initialPosts = fetchPostsFromMastodon($firstInstance, 5);
     <meta property="og:title" content="Mastofetch" />
     <meta property="og:type" content="site" />
     <meta property="og:url" content="https://mastofetch.vercel.app" />
-    <meta property="og:image" content="https://res.cloudinary.com/dceum4nes/image/upload/v1748231620/mastofetch/Logo_wgac9d.png" />
+    <meta property="og:image" content="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/mastofetch/bdwa8xpebulizhkqnkuq" />
     <meta property="og:description" content="Catch the fediverse in your hands with Mastofetch">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="https://mastofetch.vercel.app">
     <meta property="twitter:url" content="https://mastofetch.vercel.app">
     <meta name="twitter:title" content="Google">
     <meta name="twitter:description" content="Catch the fediverse in your hands with Mastofetch">
-    <meta name="twitter:image" content="https://res.cloudinary.com/dceum4nes/image/upload/v1748231620/mastofetch/Logo_wgac9d.png">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/mastofetch/bdwa8xpebulizhkqnkuq">
     <link rel="canonical" href="https://mastofetch.vercel.app" />
    <style>
 body {
