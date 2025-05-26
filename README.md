@@ -98,8 +98,8 @@ We do not store any data about our visitors or the fetched posts. All data is re
 Mastofetch accesses public APIs from Mastodon instances. These instances are independently operated, and each has its own privacy policy. You can refer to each instance’s website for more details about how they handle data.
 <br><br>
 
-6. Contact
-If you have any questions or concerns about this privacy policy, please contact us at:
+6. Contact<br>
+If you have any questions or concerns about this privacy policy, please contact us at:<br>
 https://github.com/thedoggybrad/mastofetch/issues
 <br><br>
 
