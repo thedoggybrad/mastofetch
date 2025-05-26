@@ -244,32 +244,9 @@ $instances = [
 
 function fetchPostsFromMastodon($url, $limit = 20)
 {
-    $fullUrl = $url . '?limit=' . $limit;
-
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $fullUrl);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_USERAGENT, 'MastofetchBot/1.0 (+https://mastofetch.vercel.app)');
-    curl_setopt($ch, CURLOPT_TIMEOUT, 10); // timeout in seconds
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true); // verify SSL
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // follow redirects
-
-    $response = curl_exec($ch);
-
-    if (curl_errno($ch)) {
-        curl_close($ch);
-        return []; 
-    }
-
-    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    curl_close($ch);
-
-    if ($httpCode >= 200 && $httpCode < 300) {
-        $data = json_decode($response, true);
-        return $data ?? [];
-    }
-
-    return [];
+    $response = @file_get_contents($url . '?limit=' . $limit);
+    $data = json_decode($response, true);
+    return $data ?? [];
 }
 
 function decodeEntities($text)
