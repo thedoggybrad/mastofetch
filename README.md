@@ -1,4 +1,4 @@
-### This project will become the sucessor of Mastoget. Once this project is alive, "The Mastoget Organization" will begin its shutdown and will redirect all of its endpoints to Mastofetch.
+### This project will soon become the sucessor of Mastoget, however an incident regarding Github and Vercel had delayed the process which can be tracked on https://www.githubstatus.com/incidents/d0nm3xcdc5jw. Once this project is online "The Mastoget Organization" will begin its shutdown and will redirect all of its endpoints to Mastofetch.
 
 ![android-chrome-192x192_on3vfq](https://github.com/user-attachments/assets/8d968cbe-7fe7-4210-80f1-41a12beff92f)
 # Mastofetch
