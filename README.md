@@ -1,6 +1,6 @@
 ### This project will become the sucessor of Mastoget. Once this project is alive, "The Mastoget Organization" will begin its shutdown and will redirect all of its endpoints to Mastofetch.
 
-![android-chrome-192x192](https://github.com/user-attachments/assets/30a33f99-3e02-44ae-85f5-2ed2176dcc8c)
+![android-chrome-192x192_on3vfq](https://github.com/user-attachments/assets/8d968cbe-7fe7-4210-80f1-41a12beff92f)
 # Mastofetch
 Mastofetch is your anonymized feed retriever for the Mastodon network. This project feeds the public posts posted across the entire Mastodon network to your web browser.
 <br>
