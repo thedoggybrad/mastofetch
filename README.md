@@ -4,10 +4,11 @@ Mastofetch is your anonymized feed retriever for the Mastodon network. This proj
 <br>
 Mastoget can retrieve posts from 235 Mastodon Instances. Though, 5 posts will initially appear then the rest will load as you scroll (lazyloading) to prevent overloading the server.
 
-## Try it
-https://mastofetch.vercel.app
+## Try it!
+Visit 
+[https://mastofetch.vercel.app](https://mastofetch.vercel.app) to try Mastofetch today!
 
-<br>
+<br><br>
 [Terms of Service](#terms-of-service-for-mastofetch)  <br>
 [Privacy Policy](#privacy-policy-for-mastofetch)  <br>
 [Vision](#vision-of-mastofetch)  <br>
