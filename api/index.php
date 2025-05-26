@@ -464,6 +464,7 @@ hr {
 
 </head>
 <body>
+  <a rel="me" style="display: none;" href="https://mastodon.social/@mastoget">Mastodon</a>
     <img class="mastogetlogo" width="128px" height="128px" src="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/mastofetch/Logo_wgac9d">
     <p class="popup" style="color:white; text-align:center">
         <a class="refresh" href="#" onclick="location.reload(); return false;">Refresh Content</a><br>
