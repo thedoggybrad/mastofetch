@@ -103,7 +103,7 @@ We may update this Privacy Policy from time to time. Changes will be posted on t
 <br><br>
 By using Mastofetch, you agree to this Privacy Policy.
 
-## History
+## Short History of Mastofetch
 •During the early years of Mastoget, it was slow, because it loads every post it fetches before showing to the user. And it happens that 12 seperate renderers are created to avoid exceeding the limits of each endpoints.
 <br><br>
 •On May 25, 2025, "TheDoggyBrad Software Labs" fixed the major problem with Mastoget, which is slow loading as it loads everything before it shows the page to the user with lazyload.<br>
