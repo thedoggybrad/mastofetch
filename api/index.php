@@ -493,7 +493,7 @@ hr {
         }
         ?>
     </div>
-    <p id="loader" style="text-align: center; color: #ffffff;">Loading more posts...</p>
+    <p id="loader" style="text-align: center; color: #ffffff;">Loading posts...</p>
 
     <script>
         let loading = false;
