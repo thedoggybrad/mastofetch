@@ -11,7 +11,6 @@ Mastoget can retrieve posts from 235 Mastodon Instances. Though, 5 posts will in
 [Vision](#vision-of-mastofetch)  <br>
 [Mission](#mission-of-mastofetch) <br>
 [Short History](#short-history-of-mastofetch) 
-
 <br>
 
 ## Terms of Service for Mastofetch
