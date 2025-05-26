@@ -341,7 +341,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === '1') {
 }
 
 $firstInstance = $instances[array_rand($instances)];
-$initialPosts = fetchPostsFromMastodon($firstInstance, 3);
+$initialPosts = fetchPostsFromMastodon($firstInstance, 5);
 ?>
 <!DOCTYPE html>
 <html lang="en">
