@@ -6,6 +6,12 @@ Mastofetch is your anonymized feed retriever for the Mastodon network. This proj
 <br>
 Mastoget can retrieve posts from 235 Mastodon Instances. Though, 5 posts will initially appear then the rest will load as you scroll (lazyloading) to prevent overloading the server.
 
+<br><br>
+[Terms of Service](#terms-of-service-for-mastofetch)  
+[Privacy Policy](#privacy-policy-for-mastofetch)  
+[Short History](#short-history-of-mastofetch)
+<br>
+
 ## Terms of Service for Mastofetch
 Effective Date: May 26, 2025
 <br><br>
