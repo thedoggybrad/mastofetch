@@ -4,7 +4,7 @@
 # Mastofetch
 Mastofetch is your anonymized feed retriever for the Mastodon network. This project feeds the public posts posted across the entire Mastodon network to your web browser.
 <br>
-Mastoget can retrieve posts from 235 Mastodon Instances. Though, limited at first load but due to lazyload (progressive loading), posts from each instances appear one by one as you scroll.
+Mastoget can retrieve posts from 235 Mastodon Instances. Though, 5 posts will initially appear then the rest will load as you scroll (lazyloading) to prevent overloading the server.
 
 ## History
 •During the early years of Mastoget, it was slow, because it loads every post it fetches before showing to the user. And it happens that 12 seperate renderers are created to avoid exceeding the limits of each endpoints.
