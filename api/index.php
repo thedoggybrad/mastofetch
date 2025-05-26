@@ -1,6 +1,4 @@
 <?php
-// Source that powers Mastofetch
-// Copyright 2025-Present TheDoggyBrad Software Labs (under MIT License)
 error_reporting(0);
 header("Content-Type: text/html; charset=utf-8");
 
@@ -343,7 +341,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === '1') {
 }
 
 $firstInstance = $instances[array_rand($instances)];
-$initialPosts = fetchPostsFromMastodon($firstInstance, 5);
+$initialPosts = fetchPostsFromMastodon($firstInstance, 3);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -371,109 +369,105 @@ $initialPosts = fetchPostsFromMastodon($firstInstance, 5);
     <meta name="twitter:description" content="Catch the fediverse in your hands with Mastofetch">
     <meta name="twitter:image" content="https://res.cloudinary.com/dceum4nes/image/upload/v1748231620/mastofetch/Logo_wgac9d.png">
     <link rel="canonical" href="https://mastofetch.vercel.app" />
-   <style>
-body {
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    background-color: #1e1e2f;
-    color: #e0e0e0;
-    margin: 0;
-    padding: 20px;
-    line-height: 1.6;
-}
-
-.post {
-    background-color: #2a2a40;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 700px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease;
-}
-
-.post:hover {
-    transform: translateY(-3px);
-}
-
-.post p {
-    margin: 10px 0;
-    overflow-wrap: break-word;
-}
-
-.post a {
-    color: #64b5f6;
-    text-decoration: none;
-}
-
-.post a:hover {
-    color: #ff4081;
-    text-decoration: underline;
-}
-
-.author-img {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    float: left;
-    margin-right: 12px;
-    object-fit: cover;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-}
-
-.post strong {
-    font-size: 1.1rem;
-}
-
-.post-time {
-    color: #a0a0a0;
-    font-size: 0.85rem;
-    margin-top: -6px;
-}
-
-.media {
-    margin-top: 15px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.media img,
-.media video {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-hr {
-    border: none;
-    border-top: 1px solid #3a3a55;
-    margin: 30px auto;
-    max-width: 700px;
-}
-
-.refresh, .about {
-    color: #ffffff;
-    text-decoration: none;
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-}
-
-.mastogetlogo {
-    display: block;
-    margin: 20px auto;
-}
-
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            margin: 20px;
+        }
+        .post {
+            background-color: #333;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            color: #fff;
+        }
+        .post p {
+            overflow: hidden;
+            white-space: pre-line;
+            text-overflow: ellipsis;
+        }
+        .post a:link,
+        .popup a:link {
+            color: #fff
+        }
+        .post a:hover {
+            color: #FF0000
+        }
+        .media {
+            max-width: 100%;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        .media img,
+        .media video {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .author-img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #fff
+        }
+        @media only screen and (max-width: 600px) {
+            .post {
+                max-width: 95%;
+                margin: 10px;
+            }
+            .author-img {
+                width: 40px;
+                height: 40px;
+                margin-right: 5px;
+            }
+        }
+        .mastogetlogo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #popupBox {
+            display: none;
+            background-color: #333;
+            color: #fff;
+            padding: 50px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+            overflow: auto;
+        }
+        .popup a:link {
+            color: #fff
+        }
+        .popup a:hover {
+            color: #FF0000
+        }
     </style>
-
 </head>
 <body>
-    <img class="mastogetlogo" width="128px" height="128px" src="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/mastofetch/Logo_wgac9d">
+    <img class="mastogetlogo" width="128px" height="128px" src="https://res.cloudinary.com/dceum4nes/image/upload/v1748231620/mastofetch/Logo_wgac9d.png">
     <p class="popup" style="color:white; text-align:center">
-        <a class="refresh" href="#" onclick="location.reload(); return false;">Refresh Content</a><br>
-        <a class="about" href="https://github.com/thedoggybrad/mastofetch/blob/main/README.md">About Mastofetch</a>
-    </p><br>
+        <a href="#" onclick="location.reload(); return false;">Refresh Content</a><br>
+        <a href="PENDING">About Mastofetch</a>
+    </p><br><br>
     <div id="posts">
         <?php
         foreach ($initialPosts as $post) {
@@ -481,7 +475,7 @@ hr {
             echo "<div class='post'>";
             echo "<img class='author-img' src='{$authorProfileImage}' alt='Author Profile Image'>";
             echo "<p style='margin-bottom: 2px;'><strong>{$post['account']['display_name']}</strong><p class='post-time' style='margin-top: 0px;'>Posted&nbsp;" . getTimeElapsedString($post['created_at']) . "</p>";
-            echo "<p>" . decodeEntities(strip_tags($post['content'], '<p><a><br><strong><em>')) . "</p>";
+            echo "<p>" . decodeEntities($post['content']) . "</p>";
 
             if (!empty($post['media_attachments'])) {
                 foreach ($post['media_attachments'] as $attachment) {
