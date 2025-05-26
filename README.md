@@ -8,8 +8,8 @@ Mastoget can retrieve posts from 235 Mastodon Instances. Though, 5 posts will in
 <br><br>
 [Terms of Service](#terms-of-service-for-mastofetch)  <br>
 [Privacy Policy](#privacy-policy-for-mastofetch)  <br>
-[Vision of Mastofetch](#vision-of-mastofetch)  <br>
-[Mission of Mastofetch](#mission-of-mastofetch) <br>
+[Vision](#vision-of-mastofetch)  <br>
+[Mission](#mission-of-mastofetch) <br>
 [Short History](#short-history-of-mastofetch) 
 
 <br>
