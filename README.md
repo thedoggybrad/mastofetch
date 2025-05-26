@@ -7,8 +7,8 @@ Mastoget can retrieve posts from 235 Mastodon Instances. Though, 5 posts will in
 ## Try it!
 Visit 
 [https://mastofetch.vercel.app](https://mastofetch.vercel.app) to try Mastofetch today!
+<br>
 
-<br><br>
 [Terms of Service](#terms-of-service-for-mastofetch)  <br>
 [Privacy Policy](#privacy-policy-for-mastofetch)  <br>
 [Vision](#vision-of-mastofetch)  <br>
