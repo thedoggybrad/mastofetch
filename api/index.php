@@ -480,7 +480,7 @@ a[href="PENDING"] {
             echo "<div class='post'>";
             echo "<img class='author-img' src='{$authorProfileImage}' alt='Author Profile Image'>";
             echo "<p style='margin-bottom: 2px;'><strong>{$post['account']['display_name']}</strong><p class='post-time' style='margin-top: 0px;'>Posted&nbsp;" . getTimeElapsedString($post['created_at']) . "</p>";
-            echo "<p>" . decodeEntities($post['content']) . "</p>";
+            echo "<p>" . decodeEntities(strip_tags($post['content'], '<p><a><br><strong><em>')) . "</p>";
 
             if (!empty($post['media_attachments'])) {
                 foreach ($post['media_attachments'] as $attachment) {
