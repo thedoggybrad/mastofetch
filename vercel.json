@@ -6,7 +6,7 @@
     }
   },
   "routes": [
-    { "src": "/(.*)", "dest": "/api/index.php" },
-    { "src": "/google9059940f01345bb8.html", "dest": "/api/google9059940f01345bb8.html" }
+    { "src": "/google9059940f01345bb8.html", "dest": "/google9059940f01345bb8.html" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
