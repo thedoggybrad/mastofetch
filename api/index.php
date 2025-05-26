@@ -244,7 +244,25 @@ $instances = [
 
 function fetchPostsFromMastodon($url, $limit = 20)
 {
-    $response = @file_get_contents($url . '?limit=' . $limit);
+    $fullUrl = $url . '?limit=' . $limit;
+
+    $opts = [
+        'http' => [
+            'method'  => 'GET',
+            'header'  => [
+                'User-Agent: MastofetchBot/1.0 (+https://mastofetch.vercel.app)',
+            ],
+            'timeout' => 10 // in seconds
+        ]
+    ];
+
+    $context = stream_context_create($opts);
+    $response = @file_get_contents($fullUrl, false, $context);
+
+    if ($response === false) {
+        return [];
+    }
+
     $data = json_decode($response, true);
     return $data ?? [];
 }
