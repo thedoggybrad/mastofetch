@@ -1,4 +1,6 @@
 <?php
+// Source that powers Mastofetch
+// Copyright 2025-Present TheDoggyBrad Software Labs (under MIT License)
 error_reporting(0);
 header("Content-Type: text/html; charset=utf-8");
 
