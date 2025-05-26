@@ -1,11 +1,13 @@
-### This project will soon become the sucessor of Mastoget, however an incident regarding Github and Vercel had delayed the process which can be tracked on https://www.githubstatus.com/incidents/d0nm3xcdc5jw. Once this project is online "The Mastoget Organization" will begin its shutdown and will redirect all of its endpoints to Mastofetch.
-
 ![android-chrome-192x192_on3vfq](https://github.com/user-attachments/assets/8d968cbe-7fe7-4210-80f1-41a12beff92f)
 # Mastofetch
 Mastofetch is your anonymized feed retriever for the Mastodon network. This project feeds the public posts posted across the entire Mastodon network to your web browser.
 <br>
 Mastoget can retrieve posts from 235 Mastodon Instances. Though, 5 posts will initially appear then the rest will load as you scroll (lazyloading) to prevent overloading the server.
-<br><br>
+
+## Try it
+https://mastofetch.vercel.app
+
+<br>
 [Terms of Service](#terms-of-service-for-mastofetch)  <br>
 [Privacy Policy](#privacy-policy-for-mastofetch)  <br>
 [Vision](#vision-of-mastofetch)  <br>
