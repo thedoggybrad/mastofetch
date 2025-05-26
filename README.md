@@ -111,10 +111,10 @@ We may update this Privacy Policy from time to time. Changes will be posted on t
 <br><br>
 By using Mastofetch, you agree to this Privacy Policy.
 
-## 🌐 Vision of Mastofetch
+## Vision of Mastofetch
 To make the decentralized social web more accessible, discoverable, and transparent by providing a seamless, ethical window into the diverse voices of the Fediverse.
 
-## 🚀 Mission of Mastofetch
+## Mission of Mastofetch
 Mastofetch aims to empower developers, researchers, and curious users by delivering an open-source, privacy-conscious tool that fetches and organizes public Mastodon content across instances—promoting interoperability, openness, and user empowerment in the evolving world of federated networks.
 
 ## Short History of Mastofetch
