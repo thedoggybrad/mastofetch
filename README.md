@@ -8,7 +8,10 @@ Mastoget can retrieve posts from 235 Mastodon Instances. Though, 5 posts will in
 <br><br>
 [Terms of Service](#terms-of-service-for-mastofetch)  
 [Privacy Policy](#privacy-policy-for-mastofetch)  
+[Vision of Mastofetch](#vision-of-mastofetch)  
+[Mission of Mastofetch](#mission-of-mastofetch)
 [Short History](#short-history-of-mastofetch)
+
 <br>
 
 ## Terms of Service for Mastofetch
@@ -107,6 +110,12 @@ https://github.com/thedoggybrad/mastofetch/issues
 We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date.
 <br><br>
 By using Mastofetch, you agree to this Privacy Policy.
+
+## 🌐 Vision of Mastofetch
+To make the decentralized social web more accessible, discoverable, and transparent by providing a seamless, ethical window into the diverse voices of the Fediverse.
+
+## 🚀 Mission of Mastofetch
+Mastofetch aims to empower developers, researchers, and curious users by delivering an open-source, privacy-conscious tool that fetches and organizes public Mastodon content across instances—promoting interoperability, openness, and user empowerment in the evolving world of federated networks.
 
 ## Short History of Mastofetch
 •During the early years of Mastoget, it was slow, because it loads every post it fetches before showing to the user. And it happens that 12 seperate renderers are created to avoid exceeding the limits of each endpoints.
