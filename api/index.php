@@ -508,6 +508,10 @@ hr {
   color: #ff0000;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
     </style>
 
 </head>
@@ -563,11 +567,23 @@ hr {
   const btn = document.getElementById("aboutBtn");
   const span = document.querySelector(".about-close");
 
-  btn.onclick = () => modal.style.display = "block";
-  span.onclick = () => modal.style.display = "none";
-  window.onclick = e => {
-    if (e.target == modal) modal.style.display = "none";
-  };
+btn.onclick = () => {
+  modal.style.display = "block";
+  document.body.classList.add("modal-open");
+};
+
+span.onclick = () => {
+  modal.style.display = "none";
+  document.body.classList.remove("modal-open");
+};
+
+window.onclick = e => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+  }
+};
+
 </script>
 
     <script>
