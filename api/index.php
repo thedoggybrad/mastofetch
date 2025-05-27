@@ -321,7 +321,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === '1') {
         $authorProfileImage = getAuthorProfileImage($post['account']);
         echo "<div class='post'>";
         echo "<img class='author-img' src='{$authorProfileImage}' alt='Author Profile Image'>";
-        echo "<p style='margin-bottom: 2px;'><strong>{$post['account']['display_name']}</strong></p>";
+        echo "<p style='margin-bottom: 2px;'><strong><?= htmlspecialchars($post['account']['display_name'], ENT_QUOTES | ENT_HTML5, 'UTF-8') ?></strong></p>";
         echo "<p class='post-time' style='margin-top: 0px;'>Posted&nbsp;" . getTimeElapsedString($post['created_at']) . "</p>";
         echo "<p>" . decodeEntities($post['content']) . "</p>";
 
