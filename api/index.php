@@ -1,5 +1,5 @@
 <?php
-// Source that powers Mastofetch
+// Source code that powers Mastofetch
 // Copyright 2025-Present TheDoggyBrad Software Labs (under MIT License)
 error_reporting(0);
 header("Content-Type: text/html; charset=utf-8");
@@ -481,7 +481,7 @@ hr {
             echo "<div class='post'>";
             echo "<img class='author-img' src='{$authorProfileImage}' alt='Author Profile Image'>";
             echo "<p style='margin-bottom: 2px;'><strong>{$post['account']['display_name']}</strong><p class='post-time' style='margin-top: 0px;'>Posted&nbsp;" . getTimeElapsedString($post['created_at']) . "</p>";
-            echo "<p>" . decodeEntities(strip_tags($post['content'], '<p><a><br><strong><em>')) . "</p>";
+            echo "<p>" . strip_tags(decodeEntities($post['content']), '<p><a><br><strong><em><ul><ol><li><blockquote><code><img>') . "</p>";
 
             if (!empty($post['media_attachments'])) {
                 foreach ($post['media_attachments'] as $attachment) {
