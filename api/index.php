@@ -370,6 +370,7 @@ $initialPosts = fetchPostsFromMastodon($firstInstance, 5);
     <meta name="twitter:image" content="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/mastofetch/bdwa8xpebulizhkqnkuq">
     <link rel="canonical" href="https://mastofetch.vercel.app" />
     <meta name="google-site-verification" content="i75bK6WPK0pIchr3PaYsTtuaDdkr1ocmy6KSuI1i5g0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <style>
 body {
     font-family: 'Segoe UI', Roboto, sans-serif;
@@ -600,7 +601,7 @@ body.modal-open {
 
 
 <button id="toTopBtn" aria-label="Scroll to top">
-  ⬆️
+<i class="fa-solid fa-arrow-up"></i>
 </button>
     
 <script>
