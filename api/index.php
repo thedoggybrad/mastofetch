@@ -323,7 +323,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === '1') {
         echo "<img class='author-img' src='{$authorProfileImage}' alt='Author Profile Image'>";
         echo "<p style='margin-bottom: 2px;'><strong>{$post['account']['display_name']}</strong></p>";
         echo "<p class='post-time' style='margin-top: 0px;'>Posted&nbsp;" . getTimeElapsedString($post['created_at']) . "</p>";
-        echo "<p>" . decodeEntities($post['content']) . "</p>";
+        echo "<p>" . strip_tags(decodeEntities($post['content']), '<p><a><br><strong><em><blockquote><code>') . "</p>";
 
         if (!empty($post['media_attachments'])) {
             foreach ($post['media_attachments'] as $attachment) {
