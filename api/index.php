@@ -518,6 +518,27 @@ body.modal-open {
   overflow: hidden;
 }
 
+#toTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    z-index: 1000;
+    background-color: #2a2a40;
+    color: #ffffff;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#toTopBtn:hover {
+    background-color: #3b3b5c;
+    transform: translateY(-2px);
+}
+
     </style>
 
 </head>
@@ -567,6 +588,18 @@ body.modal-open {
     <footer style="text-align: center;">Copyright 2025-Present TheDoggyBrad Software Labs.<br>All Rights Reserved.</footer>
   </div>
 </div>
+
+
+<button id="toTopBtn" aria-label="Scroll to top">
+  ⬆️
+</button>
+    
+<script>
+  document.getElementById("toTopBtn").onclick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script>
+
 
 <script>
   const modal = document.getElementById("aboutModal");
