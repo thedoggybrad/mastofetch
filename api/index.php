@@ -350,7 +350,7 @@ $initialPosts = fetchPostsFromMastodon($firstInstance, 5);
     <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dceum4nes/image/upload/v1748231878/mastofetch/favicon_io/favicon-32x32_odtk7m.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/dceum4nes/image/upload/v1748231877/mastofetch/favicon_io/favicon-16x16_zlpxtr.png">
     <link rel="shortcut icon" type="image/x-icon" href="https://res.cloudinary.com/dceum4nes/image/upload/v1748231878/mastofetch/favicon_io/favicon_bfxjif.ico">
-    <link rel="manifest" href="https://res.cloudinary.com/dceum4nes/raw/upload/v1748232150/mastofetch/favicon_io/site_biohap.webmanifest">
+    <link rel="manifest" href="site.webmanifest">
     <meta name="description" content="Catch the fediverse in your hands with Mastofetch">
     <meta name="keywords" content="Mastodon, Mastofetch">
     <meta name="author" content="The Mastoget Organization">
