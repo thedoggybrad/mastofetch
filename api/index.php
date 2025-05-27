@@ -366,6 +366,7 @@ $initialPosts = fetchPostsFromMastodon($firstInstance, 5);
     <meta name="twitter:description" content="Catch the fediverse in your hands with Mastofetch">
     <meta name="twitter:image" content="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/mastofetch/bdwa8xpebulizhkqnkuq">
     <link rel="canonical" href="https://mastofetch.vercel.app" />
+    <meta name="google-site-verification" content="i75bK6WPK0pIchr3PaYsTtuaDdkr1ocmy6KSuI1i5g0" />
    <style>
 body {
     font-family: 'Segoe UI', Roboto, sans-serif;
