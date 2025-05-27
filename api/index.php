@@ -529,7 +529,7 @@ body.modal-open {
     z-index: 1000;
     background-color: #2a2a40;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 20px;
     border: none;
     border-radius: 50%;
     padding: 14px 16px;
