@@ -57,7 +57,7 @@ We may update these Terms at any time. Changes will be effective immediately upo
 <br><br>
 
 9. Governing Law<br>
-These Terms are governed by and construed in accordance with the laws of [Your Country or State], without regard to its conflict of laws principles.
+These Terms are governed by and construed in accordance with the laws of your country, without regard to its conflict of laws principles.
 <br><br>
 
 10. Contact<br>
