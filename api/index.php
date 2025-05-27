@@ -595,7 +595,7 @@ body.modal-open {
       <a class="linkers" target="_blank" rel="noopener noreferrer" href="https://github.com/thedoggybrad/mastofetch#privacy-policy-for-mastofetch">Privacy Policy</a><br>
       <a class="linkers" target="_blank" rel="noopener noreferrer" href="https://github.com/thedoggybrad/mastofetch/blob/main/LICENSE">License (MIT License)</a><br>
     <br><br>
-    <footer style="text-align: center;">#169;2025-Present TheDoggyBrad Software Labs.<br>All Rights Reserved.</footer>
+    <footer style="text-align: center;">&#169;2025-Present TheDoggyBrad Software Labs.<br>All Rights Reserved.</footer>
   </div>
 </div>
 
