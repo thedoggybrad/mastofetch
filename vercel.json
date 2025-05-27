@@ -9,6 +9,7 @@
     { "src": "/google9059940f01345bb8.html", "dest": "/google9059940f01345bb8.html" },
     { "src": "/BingSiteAuth.xml", "dest": "/BingSiteAuth.xml" },
     { "src": "/site.webmanifest", "dest": "/site.webmanifest" },
+    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
