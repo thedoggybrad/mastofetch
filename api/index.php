@@ -532,7 +532,7 @@ body.modal-open {
     font-size: 24px;
     border: none;
     border-radius: 50%;
-    padding: 12px;
+    padding: 14px 16px;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease, transform 0.2s ease;
