@@ -10,6 +10,7 @@
     { "src": "/BingSiteAuth.xml", "dest": "/BingSiteAuth.xml" },
     { "src": "/site.webmanifest", "dest": "/site.webmanifest" },
     { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
+    { "src": "/favicon.ico", "dest": "/favicon.ico" },
     { "src": "/yandex_1b3fbcceef1a6764.html", "dest": "/yandex_1b3fbcceef1a6764.html" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ]
