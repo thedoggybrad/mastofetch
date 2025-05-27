@@ -464,6 +464,50 @@ hr {
     margin: 20px auto;
 }
 
+.linkers {
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.about-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.about-modal-content {
+  background-color: #2a2a40;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  font-family: system-ui, sans-serif;
+  color: #ffffff;
+  font-style: normal;
+}
+
+.about-close {
+  color: #ffffff;
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.about-close:hover {
+  color: #ff0000;
+}
+
     </style>
 
 </head>
@@ -472,7 +516,7 @@ hr {
     <img class="mastofetchlogo" width="128px" height="128px" src="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/mastofetch/Logo_wgac9d">
     <p class="popup" style="color:white; text-align:center">
         <a class="refresh" href="#" onclick="location.reload(); return false;">Refresh Content</a><br>
-        <a class="about" href="https://github.com/thedoggybrad/mastofetch/blob/main/README.md">About Mastofetch</a>
+        <a class="about" id="aboutBtn" href="#">About Mastofetch</a>
     </p><br>
     <div id="posts">
         <?php
@@ -498,6 +542,33 @@ hr {
         ?>
     </div>
     <p id="loader" style="text-align: center; color: #ffffff;">Loading posts...</p>
+
+
+  <div id="aboutModal" class="about-modal">
+  <div class="about-modal-content">
+    <span class="about-close">&times;</span>
+     <img class="mastofetchlogo" width="92px" height="92px" src="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/mastofetch/Logo_wgac9d">
+    <p>Mastofetch is your anonymized feed retriever for the Mastodon network. This project feeds the public posts posted across the entire Mastodon network to your web browser.</p>
+      <a class="linkers" href="https://github.com/thedoggybrad/mastofetch#terms-of-service-for-mastofetch">Terms of Service</a><br>
+      <a class="linkers" href="https://github.com/thedoggybrad/mastofetch#privacy-policy-for-mastofetch">Privacy Policy</a><br>
+      <a class="linkers" href="https://github.com/thedoggybrad/mastofetch/blob/main/LICENSE">License (MIT License)</a><br>
+    <a class="linkers" href="https://github.com/thedoggybrad/mastofetch">Github Repository</a><br>
+    <br><br>
+    <footer style="text-align: center;">Copyright 2025-Present TheDoggyBrad Software Labs.<br>All Rights Reserved.</footer>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("aboutModal");
+  const btn = document.getElementById("aboutBtn");
+  const span = document.querySelector(".about-close");
+
+  btn.onclick = () => modal.style.display = "block";
+  span.onclick = () => modal.style.display = "none";
+  window.onclick = e => {
+    if (e.target == modal) modal.style.display = "none";
+  };
+</script>
 
     <script>
         let loading = false;
