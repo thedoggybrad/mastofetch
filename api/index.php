@@ -264,7 +264,7 @@ function fetchPostsFromMastodon($url, $limit = 20)
     }
 
     $data = json_decode($response, true);
-    return $data ?? [];
+    return is_array($data) ? $data : [];
 }
 
 function decodeEntities($text)
@@ -279,8 +279,8 @@ function getAuthorProfileImage($account)
 
 function getTimeElapsedString($datetime)
 {
-    $now = new DateTime;
-    $ago = new DateTime($datetime);
+    $now = new DateTime("now", new DateTimeZone("UTC"));
+    $ago = new DateTime($datetime, new DateTimeZone("UTC"));
     $diff = $now->diff($ago);
 
     $string = [
@@ -306,8 +306,10 @@ function getTimeElapsedString($datetime)
 function getRandomInstanceURL($exclude = null)
 {
     global $instances;
-    $filtered = array_filter($instances, fn($url) => $url !== $exclude);
+    $filtered = array_values(array_filter($instances, fn($url) => $url !== $exclude));
+    if (empty($filtered)) return null;
     return $filtered[array_rand($filtered)];
+
 }
 
 if (isset($_GET['ajax']) && $_GET['ajax'] === '1') {
