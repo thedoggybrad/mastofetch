@@ -512,6 +512,9 @@ hr {
 
 .about-close:hover {
   color: #ff0000;
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
 }
 
 body.modal-open {
@@ -532,11 +535,17 @@ body.modal-open {
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease, transform 0.2s ease;
+   -webkit-user-select: none; 
+   -ms-user-select: none; 
+   user-select: none;
 }
 
 #toTopBtn:hover {
     background-color: #3b3b5c;
     transform: translateY(-2px);
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
 }
 
     </style>
