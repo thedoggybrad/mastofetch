@@ -548,10 +548,10 @@ hr {
   <div class="about-modal-content">
     <span class="about-close">&times;</span>
      <img class="mastofetchlogo" width="92px" height="92px" src="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/mastofetch/Logo_wgac9d">
-    <p>Mastofetch is your anonymized feed retriever for the Mastodon network. This project feeds the public posts posted across the entire Mastodon network to your web browser.</p>
-      <a class="linkers" href="https://github.com/thedoggybrad/mastofetch#terms-of-service-for-mastofetch">Terms of Service</a><br>
-      <a class="linkers" href="https://github.com/thedoggybrad/mastofetch#privacy-policy-for-mastofetch">Privacy Policy</a><br>
-      <a class="linkers" href="https://github.com/thedoggybrad/mastofetch/blob/main/LICENSE">License (MIT License)</a><br>
+     <p>Mastofetch is your anonymized feed retriever for the Mastodon network. This project feeds the public posts posted across the entire Mastodon network to your web browser.</p>
+      <a class="linkers" target="_blank" rel="noopener noreferrer" href="https://github.com/thedoggybrad/mastofetch#terms-of-service-for-mastofetch">Terms of Service</a><br>
+      <a class="linkers" target="_blank" rel="noopener noreferrer" href="https://github.com/thedoggybrad/mastofetch#privacy-policy-for-mastofetch">Privacy Policy</a><br>
+      <a class="linkers" target="_blank" rel="noopener noreferrer" href="https://github.com/thedoggybrad/mastofetch/blob/main/LICENSE">License (MIT License)</a><br>
     <a class="linkers" href="https://github.com/thedoggybrad/mastofetch">Github Repository</a><br>
     <br><br>
     <footer style="text-align: center;">Copyright 2025-Present TheDoggyBrad Software Labs.<br>All Rights Reserved.</footer>
