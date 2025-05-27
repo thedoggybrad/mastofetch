@@ -593,7 +593,8 @@ body.modal-open {
       <a class="linkers" target="_blank" rel="noopener noreferrer" href="https://github.com/thedoggybrad/mastofetch#terms-of-service-for-mastofetch">Terms of Service</a><br>
       <a class="linkers" target="_blank" rel="noopener noreferrer" href="https://github.com/thedoggybrad/mastofetch#privacy-policy-for-mastofetch">Privacy Policy</a><br>
       <a class="linkers" target="_blank" rel="noopener noreferrer" href="https://github.com/thedoggybrad/mastofetch/blob/main/LICENSE">License (MIT License)</a><br>
-    <a class="linkers" href="https://github.com/thedoggybrad/mastofetch">Github Repository</a><br>
+      <a class="linkers" target="_blank" rel="me" href="https://mastodon.social/@mastofetch">Mastodon Profile</a><br>
+      <a class="linkers" href="https://github.com/thedoggybrad/mastofetch">Github Repository</a><br>
     <br><br>
     <footer style="text-align: center;">Copyright 2025-Present TheDoggyBrad Software Labs.<br>All Rights Reserved.</footer>
   </div>
