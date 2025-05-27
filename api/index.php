@@ -349,7 +349,7 @@ $initialPosts = fetchPostsFromMastodon($firstInstance, 5);
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mastofetch - Catch the fediverse in your hands</title>
-    <link rel="icon" href="https://res.cloudinary.com/dceum4nes/image/upload/v1748231878/mastofetch/favicon_io/favicon_bfxjif.ico">
+    <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/dceum4nes/image/upload/v1748231878/mastofetch/favicon_io/apple-touch-icon_td8gsp.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dceum4nes/image/upload/v1748231878/mastofetch/favicon_io/favicon-32x32_odtk7m.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/dceum4nes/image/upload/v1748231877/mastofetch/favicon_io/favicon-16x16_zlpxtr.png">
