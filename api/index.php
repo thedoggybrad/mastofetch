@@ -591,7 +591,7 @@ body.modal-open {
      <p>Mastofetch is your anonymized feed retriever for the Mastodon network. This project feeds the public posts posted across the entire Mastodon network to your web browser.</p>
       <div style="text-align: center;"
       <a class="linkers" target="_blank" rel="noopener noreferrer" href="https://github.com/thedoggybrad/mastofetch#terms-of-service-for-mastofetch">Terms of Service</a>
-      &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       <a class="linkers" target="_blank" rel="noopener noreferrer" href="https://github.com/thedoggybrad/mastofetch#privacy-policy-for-mastofetch">Privacy Policy</a><br>
       <a class="linkers" target="_blank" rel="me" href="https://mastodon.social/@mastofetch">Mastodon Profile</a>
       &nbsp; &nbsp; &nbsp;   
