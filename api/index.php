@@ -494,6 +494,9 @@ hr {
   font-family: system-ui, sans-serif;
   color: #ffffff;
   font-style: normal;
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
 }
 
 .about-close {
@@ -502,6 +505,9 @@ hr {
   font-size: 32px;
   font-weight: bold;
   cursor: pointer;
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
 }
 
 .about-close:hover {
