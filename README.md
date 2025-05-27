@@ -120,9 +120,11 @@ To make the decentralized social web more accessible, discoverable, and transpar
 Mastofetch aims to empower developers, researchers, and curious users by delivering an open-source, privacy-conscious tool that fetches and organizes public Mastodon content across instances—promoting interoperability, openness, and user empowerment in the evolving world of federated networks.
 
 ## Short History of Mastofetch
-•During the early years of Mastoget, it was slow, because it loads every post it fetches before showing to the user. And it happens that 12 seperate renderers are created to avoid exceeding the limits of each endpoints.
+•During the early years of Mastoget, it was slow, because it loads every post it fetches before showing to the user. And it happens that 12 seperate renderers are created to avoid exceeding the limits of each endpoints. It was partially solved by just showing posts from a single instance but it was not enough.
 <br><br>
-•On May 25, 2025, "TheDoggyBrad Software Labs" fixed the major problem with Mastoget, which is slow loading as it loads everything before it shows the page to the user with lazyload.<br>
-It was seen that the 12 seperate load balancing renderers of Mastoget are no longer needed.
+•On May 25, 2025, "TheDoggyBrad Software Labs" fixed the major problem with Mastoget, which is slow loading as it loads everything before it shows the page to the user with lazyload. Posts from every instance can now be seen without too much delay on the initial page load.<br>
+Then, it was seen that the 12 seperate load balancing renderers of Mastoget are no longer needed after the changes.
 <br><br>
-•On May 26, 2025, it was decided that instead of messing up with the super weird configuration of Mastoget, it was retired and replaced by Mastofetch.
+•On May 26, 2025, "The Mastoget Organization" shutted down and passed its operations to TheDoggyBrad Software Labs as "Mastofetch". 
+<br><br>
+•Up to this day, the "Mastoget" source code is still the foundation of "Mastofetch" and have been enhanced over time.
