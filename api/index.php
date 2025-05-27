@@ -459,6 +459,9 @@ hr {
     font-family: 'Segoe UI', Roboto, sans-serif;
     font-weight: 500;
     letter-spacing: 0.3px;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
 }
 
 .mastofetchlogo {
@@ -556,8 +559,8 @@ body.modal-open {
 <body>
     <img class="mastofetchlogo" width="128px" height="128px" src="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/mastofetch/Logo_wgac9d">
     <p class="popup" style="color:white; text-align:center">
-        <a class="refresh" href="#" onclick="location.reload(); return false;">Refresh Content</a><br>
-        <a class="about" id="aboutBtn" href="#">About Mastofetch</a>
+        <a oncontextmenu="return false;" class="refresh" href="#" onclick="location.reload(); return false;">Refresh Content</a><br>
+        <a oncontextmenu="return false;" class="about" id="aboutBtn" href="#">About Mastofetch</a>
     </p><br>
     <div id="posts">
         <?php
