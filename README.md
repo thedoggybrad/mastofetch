@@ -15,7 +15,8 @@ Visit
 [Privacy Policy](#privacy-policy-for-mastofetch)  <br>
 [Vision](#vision-of-mastofetch)  <br>
 [Mission](#mission-of-mastofetch) <br>
-[Short History](#short-history-of-mastofetch) 
+[Short History](#short-history-of-mastofetch) <br>
+[Self-Hosting](#self-hosting-mastofetch)
 <br>
 
 ## Terms of Service for Mastofetch
@@ -130,3 +131,10 @@ Then, it was seen that the 12 seperate load balancing renderers of Mastoget are 
 •On May 26, 2025, "The Mastoget Organization" shutted down and passed its operations to TheDoggyBrad Software Labs as "Mastofetch". 
 <br><br>
 •Up to this day, the "Mastoget" source code is still the foundation of "Mastofetch" and have been enhanced over time.
+
+## Self-hosting Mastofetch
+To self-host Mastofetch on your own, you have 2 main options:
+<br>
+A. Upload the "index.php" file located at the /api folder of this repository to your PHP-supported web hosting provider or PHP-supported self-hosting machine and it is ready to use with no setup required. Just ensure to use PHP 8 and above to avoid any issues as this project is currently designed to run under PHP 8 (There are free options but they are limited).
+<br>
+B. Fork this repository and then create a project in Vercel and link your fork repository to the project or directly use Vercel to clone this repository during the creation of your project there. You will need to follow some steps in order to do this but this will not require any technical knowledge to do so (This is absolutely free, unless you opted to a paid plannin Vercel).
