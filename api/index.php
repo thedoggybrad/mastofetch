@@ -4,6 +4,7 @@
 error_reporting(0);
 header("Content-Type: text/html; charset=utf-8");
 
+// This is the list of instances that will be used by Mastofetch
 $instances = [
 'https://mastodon.social/api/v1/timelines/public',
 'https://mas.to/api/v1/timelines/public',
@@ -242,10 +243,13 @@ $instances = [
 'https://wayne.social/api/v1/timelines/public',
 ];
 
-function fetchPostsFromMastodon($url, $limit = 20)
+// The process of fetching the posts and decoding them to what you will see on the screen
+// Limit of 50 URLs, to avoid overloading
+function fetchPostsFromMastodon($url, $limit = 50)
 {
     $fullUrl = $url . '?limit=' . $limit;
 
+// The HTTP request parameters using GET, a custom user agent and a timeout of 10 seconds to avoid heavy delays
     $opts = [
         'http' => [
             'method'  => 'GET',
@@ -256,6 +260,7 @@ function fetchPostsFromMastodon($url, $limit = 20)
         ]
     ];
 
+// The actual fetching process
     $context = stream_context_create($opts);
     $response = @file_get_contents($fullUrl, false, $context);
 
@@ -267,16 +272,20 @@ function fetchPostsFromMastodon($url, $limit = 20)
     return is_array($data) ? $data : [];
 }
 
+
+// The decoding process
 function decodeEntities($text)
 {
     return html_entity_decode($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
 }
 
+// Decoding the profile picture of the Mastodon user
 function getAuthorProfileImage($account)
 {
     return $account['avatar'];
 }
 
+// Decoding the time and date of the posts and encoding it as the estimated length of time between you seeing the post and the time it was posted
 function getTimeElapsedString($datetime)
 {
     $now = new DateTime("now", new DateTimeZone("UTC"));
@@ -303,6 +312,7 @@ function getTimeElapsedString($datetime)
     return $string ? implode(', ', array_slice($string, 0, 1)) . ' ago' : 'just now';
 }
 
+// Exclusing the already fetched URL to avoid getting from the same instance again during that run of the script
 function getRandomInstanceURL($exclude = null)
 {
     global $instances;
@@ -312,11 +322,13 @@ function getRandomInstanceURL($exclude = null)
 
 }
 
+// Includes some safety protections like sanitization 
 if (isset($_GET['ajax']) && $_GET['ajax'] === '1') {
     $exclude = filter_input(INPUT_GET, 'exclude', FILTER_SANITIZE_URL);
     $url = getRandomInstanceURL($exclude);
     $posts = fetchPostsFromMastodon($url, 10);
 
+// The encoding of the lazyload next post items
     foreach ($posts as $post) {
         $authorProfileImage = getAuthorProfileImage($post['account']);
         echo "<div class='post'>";
@@ -340,13 +352,16 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === '1') {
     exit;
 }
 
+
+// 5 Posts from the 1st instance will initially appear then the rest will appear during the lazyload
 $firstInstance = $instances[array_rand($instances)];
 $initialPosts = fetchPostsFromMastodon($firstInstance, 5);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
+    <!-- For SEO -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mastofetch - Catch the fediverse in your hands</title>
     <link rel="icon" href="favicon.ico">
@@ -371,6 +386,7 @@ $initialPosts = fetchPostsFromMastodon($firstInstance, 5);
     <meta name="twitter:image" content="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/mastofetch/bdwa8xpebulizhkqnkuq">
     <link rel="canonical" href="https://mastofetch.vercel.app" />
     <meta name="google-site-verification" content="i75bK6WPK0pIchr3PaYsTtuaDdkr1ocmy6KSuI1i5g0" />
+    <!-- For the return to the top button iocn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <style>
 body {
@@ -469,6 +485,7 @@ hr {
     margin: 20px auto;
 }
 
+/* Linkers are the hyperlinks located in the about Mastofetch modal */
 .linkers {
     color: #ffffff;
     font-family: 'Segoe UI', Roboto, sans-serif;
@@ -564,6 +581,7 @@ body.modal-open {
     </p><br>
     <div id="posts">
         <?php
+// These are the intial posts appearing
         foreach ($initialPosts as $post) {
             $authorProfileImage = getAuthorProfileImage($post['account']);
             echo "<div class='post'>";
@@ -587,7 +605,7 @@ body.modal-open {
     </div>
     <p id="loader" style="text-align: center; color: #ffffff;">Loading posts...</p>
 
-
+  <!-- The modal popup for the about Mastofetch -->
   <div id="aboutModal" class="about-modal">
   <div class="about-modal-content">
     <span class="about-close">&times;</span>
@@ -604,18 +622,20 @@ body.modal-open {
 </div>
 
 
+<!-- The button that will return you to the top of the page -->
 <button id="toTopBtn" aria-label="Scroll to top">
 <i class="fa-solid fa-arrow-up"></i>
 </button>
     
 <script>
-  document.getElementById("toTopBtn").onclick = () => {
+// The JavaScript for the return to top button document.getElementById("toTopBtn").onclick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 </script>
 
 
 <script>
+// The JavaScript for the about Mastofetch modal
   const modal = document.getElementById("aboutModal");
   const btn = document.getElementById("aboutBtn");
   const span = document.querySelector(".about-close");
@@ -640,6 +660,7 @@ window.onclick = e => {
 </script>
 
     <script>
+// The JavaScripts for the appearance of each post items
         let loading = false;
         const firstInstance = <?= json_encode($firstInstance) ?>;
 
