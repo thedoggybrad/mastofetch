@@ -135,6 +135,8 @@ Then, it was seen that the 12 seperate load balancing renderers of Mastoget are 
 <br><br>
 •On May 26, 2025, "The Mastoget Organization" shutted down and passed its operations to TheDoggyBrad Software Labs as "Mastofetch". Therefore, all the 12 seperate load balancing renderers was consolidated into this one site in a single server.
 <br><br>
+•On December 25, 2025, the initial posts that are loaded in the first load of the page was reduced from 5 to 3, in order to speed up the first load of the site. Still, the remaining posts are to be loaded by lazyload.
+<br><br>
 •Up to this day, the "Mastoget" source code is still the foundation of "Mastofetch" and have been enhanced over time.
 
 ## Self-hosting Mastofetch
