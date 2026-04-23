@@ -529,7 +529,6 @@ hr {
 body.modal-open {
   overflow: hidden;
 }
-
 #toTopBtn {
     position: fixed;
     bottom: 30px;
@@ -540,13 +539,17 @@ body.modal-open {
     font-size: 20px;
     border: none;
     border-radius: 50%;
-    padding: 14px 16px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease, transform 0.2s ease;
-   -webkit-user-select: none; 
-   -ms-user-select: none; 
-   user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #toTopBtn:hover {
