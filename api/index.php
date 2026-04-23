@@ -394,7 +394,8 @@ body.modal-open {
 </button>
     
 <script>
-// The JavaScript for the return to top button document.getElementById("toTopBtn").onclick = () => {
+// The JavaScript for the return to top button 
+    document.getElementById("toTopBtn").onclick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 </script>
