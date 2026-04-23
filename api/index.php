@@ -337,6 +337,10 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === '1') {
 
 // The encoding of the lazyload next post items
     foreach ($posts as $post) {
+    // 🚫 Skip sensitive posts
+    if (!empty($post['sensitive']) && $post['sensitive'] === true) {
+        continue;
+    }
         $authorProfileImage = getAuthorProfileImage($post['account']);
         echo "<div class='post'>";
         echo "<img class='author-img' src='{$authorProfileImage}' alt='Author Profile Image'>";
@@ -594,6 +598,10 @@ body.modal-open {
         <?php
 // These are the intial posts appearing
         foreach ($initialPosts as $post) {
+        // 🚫 Skip sensitive posts
+        if (!empty($post['sensitive']) && $post['sensitive'] === true) {
+        continue;
+        }
             $authorProfileImage = getAuthorProfileImage($post['account']);
             echo "<div class='post'>";
             echo "<img class='author-img' src='{$authorProfileImage}' alt='Author Profile Image'>";
