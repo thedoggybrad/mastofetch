@@ -271,6 +271,25 @@ function fetchPostsFromMastodon($url, $limit = 50)
     return is_array($data) ? $data : [];
 }
 
+function fetchFromAnyInstance($instances, $limit = 10, $maxAttempts = 5)
+{
+    $tried = [];
+
+    for ($i = 0; $i < $maxAttempts; $i++) {
+        $url = $instances[array_rand($instances)];
+
+        if (in_array($url, $tried)) continue;
+        $tried[] = $url;
+
+        $posts = fetchPostsFromMastodon($url, $limit);
+
+        if (!empty($posts)) {
+            return $posts;
+        }
+    }
+
+    return [];
+}
 
 // The decoding process
 function decodeEntities($text)
@@ -311,21 +330,10 @@ function getTimeElapsedString($datetime)
     return $string ? implode(', ', array_slice($string, 0, 1)) . ' ago' : 'just now';
 }
 
-// Exclusing the already fetched URL to avoid getting from the same instance again during that run of the script
-function getRandomInstanceURL($exclude = null)
-{
-    global $instances;
-    $filtered = array_values(array_filter($instances, fn($url) => $url !== $exclude));
-    if (empty($filtered)) return null;
-    return $filtered[array_rand($filtered)];
-
-}
-
 // Includes some safety protections like sanitization 
 if (isset($_GET['ajax']) && $_GET['ajax'] === '1') {
     $exclude = filter_input(INPUT_GET, 'exclude', FILTER_SANITIZE_URL);
-    $url = getRandomInstanceURL($exclude);
-    $posts = fetchPostsFromMastodon($url, 10);
+    $posts = fetchFromAnyInstance($instances, 10);
 
 // The encoding of the lazyload next post items
     foreach ($posts as $post) {
@@ -358,7 +366,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === '1') {
 
 // 5 Posts from the 1st instance will initially appear then the rest will appear during the lazyload
 $firstInstance = $instances[array_rand($instances)];
-$initialPosts = fetchPostsFromMastodon($firstInstance, 3);
+$initialPosts = fetchFromAnyInstance($instances, 3);
 ?>
 <!DOCTYPE html>
 <html lang="en">
