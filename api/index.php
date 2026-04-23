@@ -113,7 +113,6 @@ $instances = [
 'https://epicure.social/api/v1/timelines/public',
 'https://datasci.social/api/v1/timelines/public',
 'https://esq.social/api/v1/timelines/public',
-'https://opencoaster.net/api/v1/timelines/public',
 'https://genealysis.social/api/v1/timelines/public',
 'https://elekk.xyz/api/v1/timelines/public',
 'https://h-net.social/api/v1/timelines/public',
