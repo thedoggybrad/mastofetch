@@ -325,14 +325,14 @@ $initialPosts = fetchFromAnyInstance($instances, 3);
     <meta property="og:title" content="Mastofetch" />
     <meta property="og:type" content="site" />
     <meta property="og:url" content="https://mastofetch.vercel.app" />
-    <meta property="og:image" content="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/mastofetch/bdwa8xpebulizhkqnkuq" />
+    <meta property="og:image" content="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/582703433-a2d0f304-8ce2-47fc-ace0-0c1d6ae54118_nwsqsm.png" />
     <meta property="og:description" content="Catch the fediverse in your hands with Mastofetch">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="https://mastofetch.vercel.app">
     <meta property="twitter:url" content="https://mastofetch.vercel.app">
     <meta name="twitter:title" content="Google">
     <meta name="twitter:description" content="Catch the fediverse in your hands with Mastofetch">
-    <meta name="twitter:image" content="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/mastofetch/bdwa8xpebulizhkqnkuq">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/582703433-a2d0f304-8ce2-47fc-ace0-0c1d6ae54118_nwsqsm.png">
     <link rel="canonical" href="https://mastofetch.vercel.app" />
     <meta name="google-site-verification" content="i75bK6WPK0pIchr3PaYsTtuaDdkr1ocmy6KSuI1i5g0" />
     <!-- For the return to the top button iocn -->
@@ -533,7 +533,7 @@ body.modal-open {
     </p><br>
     <div id="posts">
         <?php
-// These are the intial posts appearing
+        // These are the intial posts appearing
         foreach ($initialPosts as $post) {
         // 🚫 Skip sensitive posts
         if (!empty($post['sensitive']) && $post['sensitive'] === true) {
