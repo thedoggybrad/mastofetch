@@ -4,7 +4,7 @@ Mastofetch is your anonymized feed retriever for the Mastodon network. This proj
 <br>
 Mastofetch can retrieve posts from 235 Mastodon Instances. Though, 5 posts will initially appear then the rest will load as you scroll (lazyloading) to prevent overloading the server.
 
-<img width="1909" height="906" alt="image" src="https://github.com/user-attachments/assets/a2d0f304-8ce2-47fc-ace0-0c1d6ae54118" />
+<img width="1909" height="906" alt="image" src="[https://github.com/user-attachments/assets/a2d0f304-8ce2-47fc-ace0-0c1d6ae54118](https://res.cloudinary.com/dceum4nes/image/upload/f_auto,q_auto/v1/582703433-a2d0f304-8ce2-47fc-ace0-0c1d6ae54118_nwsqsm.png)" />
 
 
 ## Try it! 
