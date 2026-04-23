@@ -6,7 +6,8 @@ header("Content-Type: text/html; charset=utf-8");
 
 // This is the list of instances that will be used by Mastofetch
 $instances = [
-'https://social.vivaldi.net/api/v1/timelines/public'
+'https://social.vivaldi.net/api/v1/timelines/public',
+'https://mstdn.plus/api/v1/timelines/public'
 ];
 
 // The process of fetching the posts and decoding them to what you will see on the screen
