@@ -137,6 +137,8 @@ Then, it was seen that the 12 seperate load balancing renderers of Mastoget are 
 <br><br>
 •On December 25, 2025, the initial posts that are loaded in the first load of the page was reduced from 5 to 3, in order to speed up the first load of the site. Still, the remaining posts are to be loaded by lazyload.
 <br><br>
+•On April 23, 2026, the initial posts that are loaded in the first load of the page was restored to 5. Bugs are also fixed. The username of the poster of the "toot" can now be clicked via hyperlink. Error recovery is also improved. UI enhancements are also done. Instances list are also revisited.
+<br><br>
 •Up to this day, the "Mastoget" source code is still the foundation of "Mastofetch" and have been enhanced over time.
 
 ## Self-hosting Mastofetch
