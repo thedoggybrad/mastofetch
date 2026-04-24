@@ -304,7 +304,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === '1') {
 
 // 5 Posts from the 1st instance will initially appear then the rest will appear during the lazyload
 $firstInstance = $instances[array_rand($instances)];
-$initialPosts = fetchFromAnyInstance($instances, 3);
+$initialPosts = fetchFromAnyInstance($instances, 5);
 ?>
 <!DOCTYPE html>
 <html lang="en">
